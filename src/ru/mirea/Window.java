@@ -10,7 +10,6 @@ import java.util.Random;
 
 public class Window extends JFrame {
     JTextField jta = new JTextField(10);
-    Font fnt= new Font("Calibre", Font.BOLD, 20);
 
     Window(){
         super("Example");
