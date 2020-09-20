@@ -15,8 +15,8 @@ public class Square extends Rectangle {
 
     public Square() {}
 
-    public Square(double width) {
-        super(width, width);
+    public Square(double width, double centerX, double centerY) {
+        super(width, width, centerX,centerY);
     }
 
     public Square(String color, boolean filled, double side) {

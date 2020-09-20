@@ -36,14 +36,15 @@ public class Window extends JFrame {
             gr2d.setColor( new Color(Math.abs(rand.nextInt())));
             switch (z) {
                 case 0:
-                    drawShape(new Circle(Math.random()*100),gr2d);
+                    drawShape(new Circle(Math.random()*100,Math.abs(rand.nextInt())%500+50,Math.abs(rand.nextInt())%500+50),gr2d);
                     break;
-                case 1:
-                    drawShape(new Rectangle(Math.random()*100,Math.random()*100),gr2d);
+                case 1://Math.abs(rand.nextInt())%500+100
+                    drawShape(new Rectangle(Math.random()*100,Math.random()*100, Math.abs(rand.nextInt())%500+50,Math.abs(rand.nextInt())%500+50),gr2d);
                     break;
                 case 2:
-                    drawShape(new Square(Math.random()*100),gr2d);
+                    drawShape(new Square(Math.random()*100,Math.abs(rand.nextInt())%500+50,Math.abs(rand.nextInt())%500+50),gr2d);
                     break;
+
             }
         }
     }

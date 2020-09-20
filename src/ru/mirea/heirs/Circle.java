@@ -10,7 +10,9 @@ public class Circle extends Shape {
 
     public Circle(){}
 
-    public Circle(double radius) {
+    public Circle(double radius, double centerX, double centerY) {
+
+        super.generateXY((int)centerX,(int)centerY);
         this.radius = radius;
     }
 
@@ -45,8 +47,7 @@ public class Circle extends Shape {
 
     @Override
     public void draw(Graphics2D p) {
-        super.draw(p);
-        p.drawRoundRect(centerX,centerY,(int)radius*2,(int)radius*2,1000,1000);
+        p.drawRoundRect(centerX,centerY,(int)radius*2,(int)radius*2,10000,10000);
 
     }
 

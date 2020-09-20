@@ -12,7 +12,8 @@ public class Rectangle extends Shape {
 
     public Rectangle() {}
 
-    public Rectangle(double width, double lenght) {
+    public Rectangle(double width, double lenght, double centerX, double centerY) {
+        super.generateXY((int)centerX,(int)centerY);
         this.width = width;
         this.lenght = lenght;
     }
@@ -35,7 +36,6 @@ public class Rectangle extends Shape {
 
     @Override
     public void draw(Graphics2D p) {
-        super.draw(p);
         p.drawRect(centerX,centerY,(int)width,(int)lenght);
 
     }
