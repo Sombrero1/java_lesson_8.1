@@ -48,8 +48,8 @@ public abstract class Shape {
      }
      public  void draw(Graphics2D p){
          Random rand=new Random();
-         centerX=Math.abs(rand.nextInt())%500+300;
-         centerY=Math.abs(rand.nextInt())%500+300;
+         centerX=Math.abs(rand.nextInt())%500+100;
+         centerY=Math.abs(rand.nextInt())%500+100;
 
 
      };

@@ -9,14 +9,20 @@ import java.awt.*;
 import java.util.Random;
 
 public class Window extends JFrame {
-    JTextField jta = new JTextField(10);
 
     Window(){
         super("Example");
-        setLayout(new FlowLayout());
-        setSize(1850,1080);
-        jta.setForeground(Color.GREEN);
+        setBounds(100,100,1000,700);//окошко
+        setDefaultCloseOperation(EXIT_ON_CLOSE); // выход при закрытии
+
+        Container container = getContentPane();
+        container.setLayout(new GridLayout());
+
+
         setVisible(true);
+
+        //Graphics g = getGraphics();
+//        paint(g);
 
     }
 
@@ -38,7 +44,6 @@ public class Window extends JFrame {
                 case 2:
                     drawShape(new Square(Math.random()*100),gr2d);
                     break;
-
             }
         }
     }
