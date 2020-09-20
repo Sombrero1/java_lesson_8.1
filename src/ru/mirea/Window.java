@@ -10,13 +10,20 @@ import java.util.Random;
 
 public class Window extends JFrame {
 
+    JButton btn;
+
     Window(){
         super("Example");
+
+        btn= new JButton("Press me please");
+
         setBounds(100,100,1000,700);//окошко
         setDefaultCloseOperation(EXIT_ON_CLOSE); // выход при закрытии
 
         Container container = getContentPane();
-        container.setLayout(new GridLayout());
+        container.setLayout(new FlowLayout());
+        container.add(btn);
+        btn.addMouseListener(new MyMouseListener(this));
 
 
         setVisible(true);
